@@ -1,16 +1,26 @@
 <?php
-    if($_SERVER['REQUEST_METHOD']==='POST'){
-        $user = trim($_POST['user'] ?? '');
-        $pass = trim($_POST['pass'] ?? '');
+session_start();
+require_once __DIR__ . '/../controller/AuthController.php';
 
-        if($user ==="tito" && $pass === "123"){
-            header("Location: home.php");
+$mensaje = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $correo = trim($_POST['correo'] ?? '');
+    $clave = trim($_POST['clave'] ?? '');
+
+    if ($correo === '' || $clave === '') {
+        $mensaje = 'Complete todos los campos';
+    } else {
+        $auth = new AuthController();
+
+        if ($auth->login($correo, $clave)) {
+            header('Location: home.php');
             exit;
         }
-        else{
-            $mensaje ="Datos incorrectos, con php";
-        }
+
+        $mensaje = 'Correo o clave incorrectos';
     }
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,13 +46,13 @@
         <div class="caja">
             <form action="" method="post" id="frmLogin">
                 <img src="../imagenes/logo.png" alt="logo onstituciones">
-                <input type="text" name="user" id="user" placeholder="Usuario">
-                <input type="password" name="pass" id="pass" placeholder="Clave">
-                <button type="" id="btnIngresar">Ingesar</button>
+                <input type="email" name="correo" id="correo" placeholder="Correo">
+                <input type="password" name="clave" id="clave" placeholder="Clave">
+                <button type="submit" id="btnIngresar">Ingesar</button>
             </form>
-            <?php  if(!empty($mensaje)) :  ?>
+            <?php  if(!empty($usuario)) :  ?>
                 <script>
-                    alert("<?php echo $mensaje; ?>");
+                    alert("<?php echo htmlspecialchars($mensaje, ENT_QUOTES, 'UTF-8'); ?>");
                 </script>
             <?php   endif; ?>
         </div>
