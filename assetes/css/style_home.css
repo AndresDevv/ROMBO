@@ -440,6 +440,70 @@ table tbody tr:hover{
 }
 
 /*======================*/
+/* Botones de tabla      */
+/*======================*/
+td.acciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+td.acciones form{
+    margin: 0;
+}
+
+.btn-tabla{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 96px;
+    height: 38px;
+    padding: 0 16px;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-tabla.editar{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    box-shadow: 0 4px 10px rgba(25, 127, 155, 0.30);
+}
+
+.btn-tabla.eliminar{
+    background-color: var(--peligro);
+    color: var(--blanco);
+    box-shadow: 0 4px 10px rgba(226, 115, 122, 0.32);
+}
+
+.btn-tabla.editar:hover{
+    background-color: var(--secundario-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(25, 127, 155, 0.38);
+}
+
+.btn-tabla.eliminar:hover{
+    background-color: #c9505a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(201, 80, 90, 0.40);
+}
+
+.btn-tabla:focus-visible{
+    outline: 3px solid rgba(34, 167, 201, 0.45);
+    outline-offset: 2px;
+}
+
+.btn-tabla:active{
+    transform: translateY(0);
+}
+
+/*======================*/
 /* Responsive           */
 /*======================*/
 @media (max-width: 976px){
