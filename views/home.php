@@ -123,7 +123,7 @@ $perimetroActual = $registroEditar['perimetro'] ?? '';
                      value="<?php echo htmlspecialchars($perimetroActual); ?>">
                 </div>
                 <div class="botones">
-                    <button type="button" onclick="calcularRombo();">Calcular</button>
+                    <button type="button" onclick="validarCalculo();">Calcular</button>
                     <a class="btn-link cancelar" href="home.php">Cancelar</a>
                     <button type="submit" name="accion" value="guardar">
                         <?php echo $idActual !== '' ? 'Actualizar' : 'Guardar'; ?>
@@ -188,6 +188,6 @@ $perimetroActual = $registroEditar['perimetro'] ?? '';
         </div>
     </main>
 
-    <script src="../assetes/js/app.js?v=2"></script>
+    <script src="../assetes/js/app.js?v=3"></script>
 </body>
 </html>

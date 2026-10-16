@@ -17,6 +17,10 @@
  
 }); */
 
+function esValorValido(valor) {
+    return !isNaN(valor) && valor > 0;
+}
+
 function calcularRombo() {
     const ladoInput = document.getElementById('txtLado');
     const alturaInput = document.getElementById('txtAltura');
@@ -30,24 +34,34 @@ function calcularRombo() {
     const lado = parseFloat(ladoInput.value);
     const altura = parseFloat(alturaInput.value);
 
-    if (isNaN(lado) || lado <= 0) {
+    // Calculo en vivo: sin avisos para no interrumpir la escritura.
+    if (esValorValido(lado) && esValorValido(altura)) {
+        areaInput.value = (lado * altura).toFixed(2);
+        perimetroInput.value = (lado * 4).toFixed(2);
+    } else {
+        areaInput.value = '';
+        perimetroInput.value = '';
+    }
+}
+
+function validarCalculo() {
+    const ladoInput = document.getElementById('txtLado');
+    const alturaInput = document.getElementById('txtAltura');
+
+    if (!esValorValido(parseFloat(ladoInput.value))) {
         alert('Ingrese un lado válido mayor a cero');
         ladoInput.focus();
-        areaInput.value = '';
-        perimetroInput.value = '';
-        return;
+        return false;
     }
 
-    if (isNaN(altura) || altura <= 0) {
+    if (!esValorValido(parseFloat(alturaInput.value))) {
         alert('Ingrese una altura válida mayor a cero');
         alturaInput.focus();
-        areaInput.value = '';
-        perimetroInput.value = '';
-        return;
+        return false;
     }
 
-    areaInput.value = (lado * altura).toFixed(2);
-    perimetroInput.value = (lado * 4).toFixed(2);
+    calcularRombo();
+    return true;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
