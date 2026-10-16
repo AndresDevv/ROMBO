@@ -1,23 +1,23 @@
 /*======================*/
-/*   Home - Pastel      */
+/*   Home - Azul / Cian  */
 /*======================*/
 :root{
-    --fondo: #f7f3ea;
-    --fondo-2: #eef7f2;
-    --tarjeta: #fffaf3;
-    --primario: #b8a7e6;
-    --primario-oscuro: #826fc0;
-    --secundario: #bdebd6;
-    --secundario-oscuro: #78b89c;
-    --acento: #ffd6ba;
-    --acento-oscuro: #dd9a70;
-    --texto: #3f3d56;
-    --texto-suave: #6f6a80;
-    --borde: #e3d8f2;
-    --linea: #eee4d5;
+    --fondo: #eaf2fa;
+    --fondo-2: #ddebf7;
+    --tarjeta: #ffffff;
+    --primario: #1b4f72;
+    --primario-oscuro: #10334b;
+    --secundario: #22a7c9;
+    --secundario-oscuro: #197f9b;
+    --acento: #7fdcea;
+    --acento-oscuro: #3fb8cd;
+    --texto: #10233a;
+    --texto-suave: #4b6479;
+    --borde: #cfe0f0;
+    --linea: #dbe7f3;
     --blanco: #ffffff;
-    --peligro: #ef9a9a;
-    --sombra: 0 16px 32px rgba(63, 61, 86, 0.12);
+    --peligro: #e2737a;
+    --sombra: 0 16px 32px rgba(16, 35, 58, 0.16);
 }
 
 *{
@@ -31,8 +31,8 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: var(--texto);
     background:
-        radial-gradient(circle at top left, rgba(184, 167, 230, 0.35), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(189, 235, 214, 0.45), transparent 35%),
+        radial-gradient(circle at top left, rgba(27, 79, 114, 0.28), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(34, 167, 201, 0.30), transparent 35%),
         var(--fondo);
 }
 
@@ -42,9 +42,9 @@ body{
 .headeerHome{
     width: 100%;
     min-height: 130px;
-    background: rgba(255, 250, 243, 0.92);
+    background: rgba(255, 255, 255, 0.92);
     border-bottom: 1px solid var(--linea);
-    box-shadow: 0 10px 25px rgba(63, 61, 86, 0.08);
+    box-shadow: 0 10px 25px rgba(16, 35, 58, 0.12);
 }
 
 .lineaSup{
@@ -69,7 +69,7 @@ body{
     border: 1px solid var(--borde);
     border-radius: 16px;
     background-color: var(--blanco);
-    box-shadow: 0 8px 18px rgba(63, 61, 86, 0.08);
+    box-shadow: 0 8px 18px rgba(16, 35, 58, 0.12);
     overflow: hidden;
 }
 
@@ -131,11 +131,11 @@ header .buscarHeader{
 }
 
 .form1 input:focus{
-    box-shadow: 0 0 0 3px rgba(184, 167, 230, 0.22);
+    box-shadow: 0 0 0 3px rgba(34, 167, 201, 0.28);
 }
 
 .lineaInf{
-    background: linear-gradient(90deg, var(--secundario), var(--acento));
+    background: linear-gradient(90deg, var(--secundario), var(--acento-oscuro));
     width: 100%;
     min-height: 50px;
     display: flex;
@@ -164,12 +164,12 @@ header .buscarHeader{
     display: block;
     text-decoration: none;
     font-size: 20px;
-    color: var(--texto);
+    color: var(--blanco);
     padding: 12px 10px;
 }
 
 .menu li:hover{
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(16, 51, 75, 0.35);
 }
 
 /*======================*/
@@ -187,7 +187,7 @@ main{
 .buscar,
 .tabla{
     width: min(1100px, 90%);
-    background-color: rgba(255, 250, 243, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     border: 1px solid var(--borde);
     border-radius: 24px;
     box-shadow: var(--sombra);
@@ -242,7 +242,7 @@ main{
 .form2 .inputs:focus-within{
     border-color: var(--primario);
     background-color: var(--blanco);
-    box-shadow: 0 0 0 4px rgba(184, 167, 230, 0.18);
+    box-shadow: 0 0 0 4px rgba(34, 167, 201, 0.22);
 }
 
 .datos .form2 .inputs label{
@@ -310,7 +310,7 @@ main{
 .botones button:hover,
 .buscar form button:hover{
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(63, 61, 86, 0.16);
+    box-shadow: 0 8px 16px rgba(16, 35, 58, 0.20);
 }
 
 /*======================*/
@@ -359,7 +359,7 @@ main{
 }
 
 .buscar form input:focus{
-    box-shadow: 0 0 0 3px rgba(184, 167, 230, 0.22);
+    box-shadow: 0 0 0 3px rgba(34, 167, 201, 0.28);
 }
 
 /*======================*/
@@ -387,7 +387,7 @@ main{
     overflow: hidden;
     border-radius: 16px;
     background-color: var(--blanco);
-    box-shadow: 0 8px 18px rgba(63, 61, 86, 0.08);
+    box-shadow: 0 8px 18px rgba(16, 35, 58, 0.12);
 }
 
 table th,
@@ -413,7 +413,7 @@ table tbody tr:nth-child(even){
 }
 
 table tbody tr:hover{
-    background-color: #fff1df;
+    background-color: #eaf7fc;
 }
 
 .tabla .botones button:nth-child(1){
