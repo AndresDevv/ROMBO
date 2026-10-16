@@ -270,6 +270,16 @@ main{
     color: var(--texto-suave);
 }
 
+.datos .form2 .inputs .inputHome[readonly]{
+    color: var(--primario);
+    font-weight: 600;
+    cursor: not-allowed;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    pointer-events: none;
+}
+
 .datos .botones,
 .botones{
     display: flex;
@@ -410,6 +420,10 @@ table td{
 
 table tbody tr:nth-child(even){
     background-color: var(--fondo-2);
+}
+
+table th{
+    user-select: none;
 }
 
 table tbody tr:hover{
