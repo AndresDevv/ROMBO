@@ -1,7 +1,7 @@
 <?php
 class Database{
     private string $host= 'localhost';
-    private string $db = 'cuadrado_db2';
+    private string $db = 'rombo_db2';
     private string $user = 'root';
     private string $pass = '';
     private string $charset = 'utf8mb4';

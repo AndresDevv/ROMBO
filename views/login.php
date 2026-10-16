@@ -29,14 +29,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index,follow">
-    <meta name="description" content="Calculo del area y perimetro del cuadrado">
-    <meta name="keywords" content="cuadrado, sistema, base de datos">
+    <meta name="description" content="Calculo del area y perimetro del rombo">
+    <meta name="keywords" content="rombo, sistema, base de datos">
     <meta name="author" content="BC TECH">
 
     <link rel="icon" href="../imagenes/icono.png">
     <link rel="stylesheet" href="../assetes/css/style.css">
 
-    <title>Cuadrado</title>
+    <title>Rombo</title>
 </head>
 <body>
     <header>
